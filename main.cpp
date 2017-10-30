@@ -20,16 +20,14 @@ int main(int argc, char **argv)
                 break;
             }
             
-        bomba -= 1;
+        bomba--;
     }
     
     bomba = 10;
     
     do
     {
-        cout << "Contagem regressiva para a explosao: ";
-        cout << bomba;
-        cout << "\n";
+        cout << "Contagem regressiva para a explosao: " << bomba << "\n";
         
         if (bomba == 0)
         {
@@ -52,10 +50,14 @@ int main(int argc, char **argv)
                 cout << "Bomba\n";
                 bomba--;
                 cout << bomba << '\n';
-                continue;
+                //continue;
             }
         }
-        bomba -= 1;
+        
+        if (teste == 'n')
+            continue;
+        
+        bomba--;
         
     } while (bomba > 0);
     
